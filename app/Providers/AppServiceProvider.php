@@ -22,8 +22,7 @@ class AppServiceProvider extends ServiceProvider
          */
 
          Sanctum::ignoreMigrations();
-         //Register Observer
-         VirtualGuestBook::observe(VirtualGuestBookObserver::class);
+         
 
     }
 
