@@ -16,8 +16,8 @@ class VirtualGuestBookController extends Controller
     {
   
         // Retrieve all guest book entries
-        return VirtualGuestBookResource::collection(Cache::remember('guest_book_entries',60*60*24,function(){
-            VirtualGuestBook::all();
+        return VirtualGuestBookResource::collection(Cache::remember('guest_book_entries',60,function(){
+            return VirtualGuestBook::all();
         }));
     }
 
